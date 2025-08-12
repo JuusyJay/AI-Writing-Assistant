@@ -24,6 +24,11 @@ Access the app:
     Frontend: http://localhost:5173
     Backend API: http://localhost:8000 
 
+Create a .env file in /backend containing the following:
+OPENAI_API_KEY=YOUR-KEY-HERE
+OPENAI_MODEL=gpt-4o-mini
+FRONTEND_ORIGIN=http://localhost:5173
+
 Run with Docker:
 
 Make sure Docker is running on the computer.
@@ -41,7 +46,6 @@ docker compose down
 Run without Docker:
 
 Backend on Windows:
-- Add your OpenAI API Key in backend/.env then Run commands below:
 - Note: Only need to run Set-ExecutionPolicy command if running scripts is diabled on your system
 
 cd backend
