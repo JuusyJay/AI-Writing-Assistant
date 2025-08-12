@@ -92,6 +92,4 @@ Frontend tests:
 
 Run:
 
-cd frontend
-npm run test
-npm run test -- --coverage
+docker run --rm -it -v ${PWD}:/app -w /app node:20-slim bash -lc "npm ci && npm run test -- --coverage"
