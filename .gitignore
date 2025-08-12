@@ -1,0 +1,77 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+
+# Node / Frontend
+node_modules
+dist
+dist-ssr
+.vite/
+.eslintcache
+coverage/
+*.local
+
+
+# Editor / OS files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+
+# Python / Backend
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyo
+*.pyc
+.python-version
+.venv/
+venv/
+env/
+ENV/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+.tox/
+.nox/
+.dmypy.json
+dmypy.json
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.eggs/
+*.egg-info/
+dist/
+build/
+wheels/
+pip-wheel-metadata/
+*.egg
+
+
+# Env / Secrets
+.env
+.env.*
+!.env.example
+
+
+# Misc / Runtime
+*.pid
+*.seed
+*.sqlite3
+.cache/
