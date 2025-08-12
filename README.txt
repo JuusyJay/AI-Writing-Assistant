@@ -25,12 +25,8 @@ Access the app:
     Backend API: http://localhost:8000 
 
 
-OPENAI_API_KEY=YOUR-KEY-HERE
-OPENAI_MODEL=gpt-4o-mini
-FRONTEND_ORIGIN=http://localhost:5173
-
 Run with Docker:
-** Add your API KEY to .env **
+** Add your API KEY to /backend/.env **
 - Note: Make sure Docker is running on the computer.
 
 docker compose build --no-cache
@@ -44,7 +40,7 @@ docker compose down
 
 
 Run without Docker:
-** Add your API KEY to .env **
+** Add your API KEY to /backend/.env **
 
 Backend on Windows:
 - Note: Only need to run Set-ExecutionPolicy command if running scripts is diabled on your system
