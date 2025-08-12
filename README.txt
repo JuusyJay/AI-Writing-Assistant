@@ -24,14 +24,14 @@ Access the app:
     Frontend: http://localhost:5173
     Backend API: http://localhost:8000 
 
-Create a .env file in /backend containing the following:
+
 OPENAI_API_KEY=YOUR-KEY-HERE
 OPENAI_MODEL=gpt-4o-mini
 FRONTEND_ORIGIN=http://localhost:5173
 
 Run with Docker:
-
-Make sure Docker is running on the computer.
+** Add your API KEY to .env **
+- Note: Make sure Docker is running on the computer.
 
 docker compose build --no-cache
 docker compose up
@@ -44,6 +44,7 @@ docker compose down
 
 
 Run without Docker:
+** Add your API KEY to .env **
 
 Backend on Windows:
 - Note: Only need to run Set-ExecutionPolicy command if running scripts is diabled on your system
@@ -61,10 +62,9 @@ cd frontend
 npm install
 npm run dev
 
+
 Testing:
 This project includes backend tests (pytest) and frontend tests (Vitest + Testing Library + MSW).
-
-
 
 Backend tests:
 
@@ -74,7 +74,7 @@ Backend tests:
 - Cancel behavior
 - No real calls to OpenAI (HTTP is mocked)
 
-Run:
+Run in new terminal:
 
 cd backend
 $env:PYTHONPATH="."
@@ -90,6 +90,7 @@ Frontend tests:
 - Streaming updates: an EventSource test double emits chunks and verifies textareas update live
 - No real network calls (MSW stubs /process)
 
-Run:
+Run in new terminal:
 
+cd frontend
 docker run --rm -it -v ${PWD}:/app -w /app node:20-slim bash -lc "npm ci && npm run test -- --coverage"

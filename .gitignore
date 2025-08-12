@@ -65,7 +65,6 @@ pip-wheel-metadata/
 
 
 # Env / Secrets
-.env
 .env.*
 !.env.example
 
