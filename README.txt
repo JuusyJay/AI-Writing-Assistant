@@ -1,24 +1,14 @@
 # AI Writing Assistant
-
-This is a single page app that takes what you type and rephrases it into 
-different styles (Professional, Casual, Polite, Social-media) using an AI model. 
-It streams the results so you can see them appear in real-time.
-
+Assumptions:
+- Tests are designed to be deterministic and offline by default.
+- Content moderation/guardrails are not enforced beyond tone rephrasing.
+- No auth, rate limiting, audit logging, or PII retention.
 
 What it uses
 - Frontend: React + Vite
 - Backend: FastAPI + httpx
 - Streaming: Server-Sent Events (SSE)
 - Docker: Runs both frontend and backend together
-
-
-Features
-- Shows results for 4 styles at the same time
-- Streams the text in as it comes from the backend
-- Cancel button to stop mid-process
-- Clear All button to wipe all outputs
-- Char counter and a simple “Streaming / Idle” status
-- Mobile friendly
 
 Access the app:
     Frontend: http://localhost:5173
@@ -36,7 +26,6 @@ docker compose up
 Stop Everything:
 
 docker compose down
-
 
 
 Run without Docker:
@@ -64,12 +53,6 @@ This project includes backend tests (pytest) and frontend tests (Vitest + Testin
 
 Backend tests:
 
-- Health endpoint
-- Process start flow
-- Stream SSE flow (mocked responses)
-- Cancel behavior
-- No real calls to OpenAI (HTTP is mocked)
-
 Run in new terminal:
 
 cd backend
@@ -80,11 +63,6 @@ pytest --cov=app --cov-report=term-missing
 
 
 Frontend tests:
-
-- Rendering and UI state
-- Clicking “Process” triggers the mocked backend
-- Streaming updates: an EventSource test double emits chunks and verifies textareas update live
-- No real network calls (MSW stubs /process)
 
 Run in new terminal:
 
