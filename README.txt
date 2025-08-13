@@ -52,8 +52,7 @@ Testing:
 This project includes backend tests (pytest) and frontend tests (Vitest + Testing Library + MSW).
 
 Backend tests:
-
-Run in new terminal:
+- Run in new terminal:
 
 cd backend
 $env:PYTHONPATH="."
@@ -63,8 +62,7 @@ pytest --cov=app --cov-report=term-missing
 
 
 Frontend tests:
-
-Run in new terminal:
+- Run in new terminal:
 
 cd frontend
 docker run --rm -it -v ${PWD}:/app -w /app node:20-slim bash -lc "npm ci && npm run test -- --coverage"
